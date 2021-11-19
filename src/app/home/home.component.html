@@ -1,0 +1,20 @@
+<p class="text-center" > <img src="assets/logo.png" alt="" img style="width: 350px;"></p>
+<p class="text-muted text-center"> vous disposez de {{pokemons.length}}</p>
+ <p class="text-center"><img src="assets/pok.png" alt="" *ngFor="let pokemon of pokemons" style="width: 50px;"
+    [title]="pokemon.name"></p>
+
+<section class="col-md-6 mx-auto">
+    <div class="row">
+<div class="col-md-3 card" *ngFor="let pokemon of pokemons">
+   
+<img [src]="pokemon.picture" alt="">
+<div class="card-body">
+<p>{{pokemon.id}}</p>
+<p>{{pokemon.name}}</p>
+<p>{{pokemon.type}}</p>
+<p>{{pokemon.life}}</p>
+<p>{{pokemon.created | date:"dd/MM/yyy"}}</p>
+</div>
+</div>
+    </div>
+</section>
